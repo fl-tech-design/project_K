@@ -79,6 +79,7 @@ class ScrTwo(Screen):
 
 class MainApp(App):
     """ The Main App who control all."""
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.app_labs = None
@@ -88,7 +89,8 @@ class MainApp(App):
 
     def build(self):
         self.load_app_data()
-
+        self.title = "Project_K"
+        print(self.name)
         self.sm = ScreenManager()
 
         self.scr_one = ScrOne()
@@ -102,12 +104,7 @@ class MainApp(App):
         screen.add_widget(self.scr_two)
         self.sm.add_widget(screen)
         Clock.schedule_interval(self.scr_two.upd_labels, 0.2)
-        if self.app_data["act_cat"] == "gui":
-            self.sm.current = "scr_two"
-        else:
-            self.sm.current = "scr_one"
         return self.sm
-
 
     def change_win(self, new_screen, trans_dir):
         """ Changes the current screen with screenmanager.
