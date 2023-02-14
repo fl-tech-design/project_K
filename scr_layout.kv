@@ -1,0 +1,63 @@
+<ScrOne,ScrTwo>:
+    BoxBgApp:
+        orientation: "vertical"
+        padding: 4
+        BoxBgTit:
+            name: "titlebox"
+            id: box_title
+            orientation: "vertical"
+            padding: 4
+            size_hint_y: 0.08
+            BoxBgApp:
+                orientation: "horizontal"
+                padding: 3,3,3,0
+                BoxBgTit:
+                    BoxBgTit:
+                    BoxBgApp:
+                        size_hint_x: 0.2
+                        padding: 3,0,0,3
+                        BoxBgTit:
+                            Tab:
+                                name: "tab_gui"
+                                id: tab_one
+                                text: "Guides"
+                                on_release:
+                                    app.set_app_data("act_cat", "gui")
+                                    app.set_app_data("act_scr", "gui_welcome")
+                                    app.change_win("scr_two", "right")
+                    BoxBgApp:
+                        size_hint_x: 0.2
+                        padding: 3,0,0,3
+                        BoxBgTit:
+                            Tab:
+                                name: "tab_api"
+                                id: tab_two
+                                text: "API-Ref"
+                                on_release:
+                                    app.set_app_data("act_cat", "api")
+                                    app.set_app_data("act_scr", "api_kivy")
+                                    app.change_win("scr_one", "left")
+            BoxBgApp:
+                orientation: "horizontal"
+                padding: 3,0,3,3
+                BoxBgTit:
+                    size_hint_x: 0.2
+                    Logo:
+                BoxBgTit:
+                    Label:
+                        id: lab_tit
+                BoxBgTit:
+                    size_hint_x: 0.2
+        BoxBgTit:
+            name: "middlebox"
+            padding: 4,0,4,4
+            BoxBgApp:
+                padding: 3
+                BoxBgTit:
+        BoxBgTit:
+            name: "bottombox"
+            size_hint_y: 0.04
+            padding: 4,0,4,4
+            BoxBgApp:
+                padding: 3
+                BoxBgTit:

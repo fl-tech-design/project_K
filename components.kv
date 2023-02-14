@@ -1,0 +1,53 @@
+#:set bg_app  19/255,  21/255,  22/255, 1
+#:set bg_tit  32/255,  35/255,  38/255, 1
+#:set bg_sel  26/255,  53/255,  53/255, 1
+#:set bg_red 204/255,  0/255,    0/255, 1
+#:set fg_lit 177/255, 170/255, 160/255, 1
+#:set bg_tre  32/255,  35/255,  38/255, 1
+#:set bg_for  32/255,  35/255,  38/255, 1
+
+
+
+
+<BoxBgApp@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: bg_app
+        Rectangle:
+            size: self.size
+            pos: self.pos
+<BoxBgTit@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: bg_tit
+        Rectangle:
+            size: self.size
+            pos: self.pos
+<BoxRed@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1,0,0,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+<BoxGreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 0,1,0,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+<BoxBlue@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 0,0,1,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<Logo@Image>:
+    source: "pics/logo_alph.png"
+    size_hint_y: 2
+
+<Tab@Button>:
+
