@@ -3,8 +3,8 @@
 #:set bg_sel  26/255,  53/255,  53/255, 1
 #:set bg_red 204/255,  0/255,    0/255, 1
 #:set fg_lit 177/255, 170/255, 160/255, 1
-#:set bg_tre  32/255,  35/255,  38/255, 1
-#:set bg_for  32/255,  35/255,  38/255, 1
+#:set bg_lgr  50/255,  50/255,  50/255, 1
+#:set bg_dgr  40/255,  40/255,  40/255, 1
 
 
 
@@ -34,6 +34,13 @@
     canvas.before:
         Color:
             rgba: 0,1,0,1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+<BoxLgrey@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: bg_lgr
         Rectangle:
             size: self.size
             pos: self.pos
